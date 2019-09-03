@@ -105,12 +105,41 @@ newText.addEventListener('click', e=>{
 ///////////TODO: stopPropagation
 const newh2 = document.getElementsByTagName('h2')[0]
  newh2.addEventListener('click',e => {
-    newh2.style.backgroundColor="red"
+    newh2.style.color="#fff"
     e.stopPropagation();
 })
 
-const newBody = document.getElementsByTagName('body')[0]
- newBody.addEventListener('click',e => {
-    newBody.style.backgroundColor="teal"
-    // e.stopPropagation();
-})
+// const newBody = document.getElementsByTagName('body')[0]
+//  newBody.addEventListener('click',e => {
+//     newBody.style.backgroundColor="teal"
+//     // e.stopPropagation();
+// })
+
+
+
+
+
+///////////TODO: GREENSOCK?????
+ 
+
+ TweenMax.to(".resized-time", 1.5, {
+  rotationX: 360,
+  rotationY:180,
+  ease: Sine.easeInOut,
+  repeat:2,
+  yoyo:true,
+ 
+}); 
+
+let photo = document.querySelector(".mouseOver");
+TweenMax.to('.mouseOver', 1, {scale: 0.5,
+    ease:Sine.easeInOut,
+    yoyo:true,
+    repeat:1,
+   
+
+}, 0.7,
+
+)
+
+
